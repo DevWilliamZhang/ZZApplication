@@ -1,0 +1,31 @@
+package com.simple;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+import com.ldoublem.loadingView.BuildConfig;
+import com.ldoublem.loadingView.R;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main4);
+
+        TextView tv_buildType = findViewById(R.id.tv_buildType);
+        tv_buildType.setText(BuildConfig.BUILD_TYPE);
+        findViewById(R.id.btn_crash).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                String text = null;
+//                text.toUpperCase();
+                startActivity(new Intent(MainActivity.this,TestActivity.class));
+
+            }
+        });
+    }
+}
