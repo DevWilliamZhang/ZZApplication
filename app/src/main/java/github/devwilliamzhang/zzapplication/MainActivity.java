@@ -91,4 +91,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, com.simple.MainActivity.class);
         startActivity(intent);
     }
+
+    public void update(View view) {
+
+        Intent intent = new Intent(this, com.maning.mnupdateapk.MainActivity.class);
+        startActivity(intent);
+    }
 }
